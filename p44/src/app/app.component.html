@@ -1,0 +1,33 @@
+<form class="ui large form segment">
+  <h3 ui header>Enter values</h3>
+  <div class="field">
+    <label for="code">SCAC:</label>
+    <input name="code" #code value="RDWY">
+  </div>
+  <div class="field">
+    <label for="proNumber">Pro Number:</label>
+    <input name="proNumber" #proNumber value="6651264369" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+  </div>
+  <div class="field">
+    <label for="documentType">Document Type:</label>
+    <input name="documentType" #documentType value="DELIVERY_RECEIPT">
+  </div>
+  <div class="field">
+    <label for="imageFormat">Format:</label>
+    <input name="imageFormat" #imageFormat value="PNG">
+  </div>
+  <div class="field">
+    <label for="postalCode">Zip Code:</label>
+    <input name="postalCode" #postalCode value="20770" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+  </div>
+</form>
+
+<button (click)="getDocument(code, proNumber, documentType, imageFormat, postalCode)" class="ui positive right floated button">
+  Get Document!
+</button>
+
+<div *ngIf="loading">loading...</div>
+
+<div class="ui grid posts">
+  <app-urllink [urllink]="urllink" *ngIf="urllink"></app-urllink>
+</div>

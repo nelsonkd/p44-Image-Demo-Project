@@ -1,0 +1,11 @@
+p44API/node_modules
+p44Express/node_modules
+p44/system-config.js*
+p44/app/**/*.js
+p44/app/**/*.map
+p44/node_modules
+p44/jspm_packages
+p44/bower_components
+p44/aot/*
+p44/dist/*
+p44/yarn.lock
